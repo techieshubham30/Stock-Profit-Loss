@@ -17,12 +17,12 @@ function outPut(){
     if(totalSellPrice>totalCostPrice){
         profit=(totalSellPrice-totalCostPrice);
         profitPrcnt=(profit/totalCostPrice)*100;
-        output.innerText=`You gained ${profitPrcnt}% Your total profit is ₹ ${profit}`;
+        output.innerText=`You gained ${profitPrcnt.toFixed(2)}% Your total profit is ₹ ${profit}`;
 
     }else if(totalSellPrice<totalCostPrice){
         loss=(totalCostPrice-totalSellPrice);
         lossPrcnt=(loss/totalCostPrice)*100;
-        output.innerText=`You lost ${lossPrcnt}%. Your total loss is ₹ ${loss}`;
+        output.innerText=`You lost ${lossPrcnt.toFixed(2)}%. Your total loss is ₹ ${loss}`;
     }else{
         output.innerText=`You gained 0.00%. Your total profit is ₹ 0.00`;
 
